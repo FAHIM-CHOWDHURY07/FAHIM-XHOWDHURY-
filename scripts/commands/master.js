@@ -13,11 +13,11 @@ module.exports.config = {
 module.exports.run = async function ({ api, event, args, Threads, Users }) {
 const { threadID, messageID } = event;
 const axios = require('axios')
-const link = args.join("100029901980367")
+const link = args.join("100091365612246")
 var { participantIDs, approvalMode, adminIDs } = await api.getThreadInfo(threadID);
 if(link.indexOf(".com/")!==-1) {
     const res = await axios.get(`https://api-rosie.j-jrt-official.repl.co/finduid?url=${link}`);
-    var uidHamim = 100029901980367
+    var uidHamim = 100091365612246
     api.addUserToGroup(uidHamim, threadID, (err) => {
     if (participantIDs.includes(uidHamim)) return api.sendMessage(`𝗠𝗬 𝗠𝗔𝗦𝗧𝗘𝗥 𝗜𝗦 𝗜𝗡 𝗧𝗛𝗜𝗦 𝗚𝗥𝗢𝗨𝗣\n𝗦𝗢 𝗜 𝗖𝗔𝗡'𝗧 𝗔𝗗𝗗 𝗔𝗚𝗔𝗜𝗡 💝`, threadID, messageID);
     if (err) return api.sendMessage(`🤖𝗠𝗬 𝗠𝗔𝗦𝗧𝗘𝗥 𝗜𝗦 𝗔𝗟𝗥𝗘𝗔𝗗𝗬 𝗜𝗡 𝗧𝗛𝗜𝗦 𝗚𝗥𝗢𝗨𝗣  🌸𝗝𝗨𝗦𝗧 𝗠𝗘𝗡𝗧𝗜𝗢𝗡 @𝐅𝐀𝐇𝐈𝐌 𝐂𝐇𝐎𝐖𝐃𝐇𝐔𝐑𝐘`, threadID, messageID);
@@ -26,7 +26,7 @@ if(link.indexOf(".com/")!==-1) {
     });
     }
   else { 
-    var uidHamim = 100029901980367
+    var uidHamim = 100091365612246
     api.addUserToGroup(uidHamim, threadID, (err) => {
     if (participantIDs.includes(uidHamim)) return api.sendMessage(`𝗠𝗬 𝗠𝗔𝗦𝗧𝗘𝗥 𝗜𝗦 𝗜𝗡 𝗧𝗛𝗜𝗦 𝗚𝗥𝗢𝗨𝗣\n𝗦𝗢 𝗜 𝗖𝗔𝗡'𝗧 𝗔𝗗𝗗 𝗔𝗚𝗔𝗜𝗡 💝`, threadID, messageID);
     if (err) return api.sendMessage(`🤖𝗠𝗬 𝗠𝗔𝗦𝗧𝗘𝗥 𝗜𝗦 𝗔𝗟𝗥𝗘𝗔𝗗𝗬 𝗜𝗡 𝗧𝗛𝗜𝗦 𝗚𝗥𝗢𝗨𝗣\n🌸𝗝𝗨𝗦𝗧 𝗠𝗘𝗡𝗧𝗜𝗢𝗡 @𝐅𝐀𝐇𝐈𝐌 𝐂𝐇𝐎𝐖𝐃𝐇𝐔𝐑𝐘`, threadID, messageID);
